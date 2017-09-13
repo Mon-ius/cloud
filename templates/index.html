@@ -1,0 +1,83 @@
+{% extends "layout.html" %} {% block title %}NVHCloud{% endblock %} {% block content %}
+<div class="container">
+    <h4>Thumbnail</h4>
+
+    <input type="checkbox" check data-toggle="switch" name="custom-switch-text" data-on-text="OTA" data-off-text="Data"
+    data-on-color="primary" data-off-color="primary" id="switch-10" />
+    <input type="checkbox" check data-toggle="switch" name="custom-switch-text" data-on-text="Upload" data-off-text="Show"
+    data-off-color="default" data-on-color="success"  id="switch-10" />
+    <h6>Default example</h6>
+    <div class="row">
+        <div class="col-xs-6 col-md-3">
+            <a class="thumbnail" href="#">
+          <img data-src="holder.js/100%x180" alt="...">
+        </a>
+        </div>
+        <div class="col-xs-6 col-md-3">
+            <a class="thumbnail" href="#">
+          <img data-src="holder.js/100%x180" alt="...">
+        </a>
+        </div>
+        <div class="col-xs-6 col-md-3">
+            <a class="thumbnail" href="#">
+          <img data-src="holder.js/100%x180" alt="...">
+        </a>
+        </div>
+        <div class="col-xs-6 col-md-3">
+            <a class="thumbnail" href="#">
+          <img data-src="holder.js/100%x180" alt="...">
+        </a>
+        </div>
+    </div>
+    <h6>Custom content</h6>
+    <div class="row">
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <img data-src="holder.js/100%x200" alt="...">
+                <div class="caption">
+                    <h3>Thumbnail label</h3>
+                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget
+                        metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                    <p><a role="button" class="btn btn-primary" href="#">Button</a> <a role="button" class="btn btn-default"
+                            href="#">Button</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <img data-src="holder.js/100%x200" alt="...">
+                <div class="caption">
+                    <h3>Thumbnail label</h3>
+                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget
+                        metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                    <p><a role="button" class="btn btn-primary" href="#">Button</a> <a role="button" class="btn btn-default"
+                            href="#">Button</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <img data-src="holder.js/100%x200" alt="...">
+                <div class="caption">
+                    <h3>Thumbnail label</h3>
+
+                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget
+                        metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                    <p><a role="button" class="btn btn-primary" href="#">Button</a> <a role="button" class="btn btn-default"
+                            href="#">Button</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h6>Images</h6>
+    <div class="row">
+        <div class="col-md-12">
+            <img alt="..." class="img-rounded" data-src="holder.js/140x140" />
+            <img alt="..." class="img-circle" data-src="holder.js/140x140" />
+            <img alt="140x140" class="img-thumbnail" data-src="holder.js/140x140" />
+        </div>
+    </div>
+</div>
+{% endblock %} {% block js %}
+<script src="{{ url_for('static',filename='js/application.js')}}"></script>
+{% endblock %}

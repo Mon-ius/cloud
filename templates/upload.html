@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>Flask upload with Dropzone example</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dropzone.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dropzone.style.css') }}">
+</head>
+
+<body>
+    <!-- Change action value to your upload address -->
+    <div id="dropzone">
+    <form action=" {{url_for('upload')}} " class="dropzone needsclick dz-clickable"  method="POST" enctype="multipart/form-data">
+        
+        <div class="dz-message needsclick">
+            Upload your data to analyse here!<br>
+            
+            <span class="note needsclick">
+                    {% for message in get_flashed_messages() %}
+                    <div class=flash>{{ message| safe }}</div>
+                    {% endfor %}
+                
+            </span>
+        </div>
+    </form>
+</div>
+
+    <script src="{{ url_for('static', filename='dropzone.js') }}"></script>
+    
+    <script>src="{{ url_for('static', filename='test.js') }}" </script>
+    
+</body>
